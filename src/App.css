@@ -47,7 +47,7 @@ body{
   color: #00C9A7;
 }
 
-.ButtCreateAcc{
+.ButtCreateAcc.enabled{
   border:none;
   background-color:#845EC2;
   width: 150px;
@@ -59,3 +59,18 @@ body{
   color: #FEFEDF ;
   font-size: 20px;
 }
+
+.ButtCreateAcc.disabled{
+  border:none;
+  background-color:#aa9dbe;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  margin-top: 30px;
+  margin-left: 350px;
+  color: #FEFEDF ;
+  font-size: 20px;
+}
+
+

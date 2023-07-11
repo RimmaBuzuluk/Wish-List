@@ -2,9 +2,10 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
 // import MainPage from './MainPage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Registration() {
+
 
     const[email, setEmail]=useState('')
     const[password, setPassword]=useState('')
@@ -12,6 +13,18 @@ function Registration() {
     const[passwordDirty, setPasswordDirty]=useState(false)
     const[emailError,setEmailError]=useState("cann`t be empty")
     const[passwordError,setPasswordError]=useState("cann`t be empty")
+    const[formValid, setFormValid]=useState(false)
+
+
+    useEffect(()=>{
+        if(emailError || passwordError){
+            setFormValid(false)
+        }
+        else{
+            setFormValid(true)
+        }
+
+    },[emailError,passwordError])
 
 
     const blurHandler=(e=>{
@@ -68,10 +81,12 @@ function Registration() {
                 </div>
             </div>
             <p className='ifYouHaveAccount'>Do you already have an account?<Link to="/logInto">Log in</Link></p>
-            <button className='ButtCreateAcc'>Create</button>
+            <button disabled={!formValid} className={`ButtCreateAcc ${formValid ? 'enabled' : 'disabled'}`}>hello</button>
         </div>
     </div>
   );
 }
+
+{/* <Link >Create</Link> */}
 
 export default Registration;
