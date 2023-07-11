@@ -12,6 +12,11 @@ body{
   font-size: 70px;
 }
 
+.registrationText{
+  color: #845EC2;
+  font-size: 30px;
+}
+
 .regText{
   margin: 0;
   font-size: 20px;
@@ -23,7 +28,7 @@ body{
 }
 
 .inputReg{
-  margin-top: 200px;
+  margin-top: 100px;
   
 }
 

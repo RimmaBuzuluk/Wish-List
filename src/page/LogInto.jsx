@@ -19,7 +19,7 @@ function LogInto() {
           </div>
         </div>
           <p className='ifYouHaveAccount'>Don`t you have an account?<Link to="/">to register</Link></p>
-          <button className='ButtCreateAcc'>Log Into</button>
+          <button className='ButtCreateAcc'><Link>Log Into</Link></button>
         </div>
       </div>
     </div>
