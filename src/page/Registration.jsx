@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 // import MainPage from './MainPage';
 import { useEffect, useState } from 'react';
@@ -14,6 +14,8 @@ function Registration() {
     const[emailError,setEmailError]=useState("cann`t be empty")
     const[passwordError,setPasswordError]=useState("cann`t be empty")
     const[formValid, setFormValid]=useState(false)
+
+    const navigate= useNavigate();
 
 
     useEffect(()=>{
@@ -60,6 +62,11 @@ function Registration() {
         }
     }
 
+    const handleSubmit=(e)=>{
+        if(formValid){
+            navigate('/mainPage')
+        }
+    }
 
   return (
     <div className="reg">
@@ -81,12 +88,12 @@ function Registration() {
                 </div>
             </div>
             <p className='ifYouHaveAccount'>Do you already have an account?<Link to="/logInto">Log in</Link></p>
-            <button disabled={!formValid} className={`ButtCreateAcc ${formValid ? 'enabled' : 'disabled'}`}>hello</button>
+            <button disabled={!formValid} className={`ButtCreateAcc ${formValid ? 'enabled' : 'disabled'}`}onClick={handleSubmit}>hello</button>
         </div>
     </div>
   );
 }
 
-{/* <Link >Create</Link> */}
+
 
 export default Registration;
