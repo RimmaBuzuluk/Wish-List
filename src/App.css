@@ -1,38 +1,56 @@
+body{
+  background-color: #FEFEDF ;
+}
+
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainText{
+  color: #845EC2;
+  font-size: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.regText{
+  margin: 0;
+  font-size: 20px;
+  color: #C493FF;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.regTextInput{
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.inputReg{
+  margin-top: 200px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.regUser{
+  border:none;
+  background-color:#C493FF;
+  width: 500px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 8px;
+}
+
+.ifYouHaveAccount{
+  margin: 0;
+  font-size: 15px;
+  color: #00C9A7;
+}
+
+.ButtCreateAcc{
+  border:none;
+  background-color:#845EC2;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  margin-top: 30px;
+  margin-left: 350px;
+  color: #FEFEDF ;
+  font-size: 20px;
 }
