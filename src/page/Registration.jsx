@@ -23,6 +23,30 @@ function Registration() {
         }
     })
     
+    const emailHandler=(e)=>{
+        setEmail(e.target.value)
+        const re=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+        if(!re.test(String(e.target.value).toLocaleLowerCase())){
+            setEmailError("email is wrong")
+        }
+        else{
+            setEmailError("")
+        }
+    }
+
+    const passwordHandler=(e)=>{
+        setPassword(e.target.value)
+        if(e.target.value.length<3){
+            setPasswordError("password is too short")
+        }
+        else if(e.target.value.length>8){
+            setPasswordError("password is too long")
+        }
+        else{
+            setPasswordError("")
+        }
+    }
+
 
   return (
     <div className="reg">
@@ -34,13 +58,13 @@ function Registration() {
                 <div >
                     <p className='regText'>Create user email</p>
                     {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
-                    <input onBlur={e=>blurHandler(e)} name="email" type='text' className='regUser'/>
+                    <input onChange={e=>emailHandler(e)} value={email} onBlur={e=>blurHandler(e)} name="email" type='text' className='regUser'/>
                 </div>
                 
                 <div className='regTextInput'>
                     <p className='regText'>Create your password</p>
                     {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
-                    <input onBlur={e=>blurHandler(e)} name="password"  className='regUser'/>
+                    <input onChange={e=>passwordHandler(e)} value={password} onBlur={e=>blurHandler(e)} name="password"  className='regUser'/>
                 </div>
             </div>
             <p className='ifYouHaveAccount'>Do you already have an account?<Link to="/logInto">Log in</Link></p>
