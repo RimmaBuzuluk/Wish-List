@@ -2,14 +2,14 @@ import { makeAutoObservable } from "mobx";
 
 
 
-class Person{
+class PersonStore{
     people=[
         {
             id:1, 
             name:"John",
             photo:"johne.jps",
             description:"John`s description",
-            userName:"JoneLi",
+            email:"rimma@gmail.com",
             parol:"lalal"
 
         },
@@ -18,7 +18,7 @@ class Person{
             name:"Tom",
             photo:"johne.jps",
             description:"Tom`s description",
-            userName:"TomLi",
+            email:"TomLi",
             parol:"lalal"
         },
         {
@@ -26,7 +26,7 @@ class Person{
             name:"Ron",
             photo:"johne.jps",
             description:"Ron`s description",
-            userName:"RonLi",
+            email:"RonLi",
             parol:"lalal"
         },
         {
@@ -34,7 +34,7 @@ class Person{
             name:"Bob",
             photo:"johne.jps",
             description:"Bob`s description",
-            userName:"BobLi",
+            email:"BobLi",
             parol:"lalal"
         }
     ];
@@ -55,4 +55,4 @@ class Person{
 
 }
 
-export default new Person();
+export default new PersonStore();
