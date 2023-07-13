@@ -8,6 +8,7 @@ function LogInto() {
   const [userName, setUserName]=useState('')
   const [userPassword, setUserPassword]=useState('')
   const [isLoggedIn, setIsLoggedIn]=useState(false)
+  const [error,setError]=useState(' ')
 
   
 
@@ -36,8 +37,10 @@ function LogInto() {
   
     if (user && user.parol === userPassword) {
       console.log("we have this user");
+      setError("")
     } else {
       console.log("we don't have this user");
+      setError("Invalid login or password")
     }
   };
   return (
@@ -56,6 +59,8 @@ function LogInto() {
               <input  className='regUser' value={userPassword} onChange={HandleChangePassword}/>
             </div>
           </div >
+
+          {error && <div style={{color:'red'}}>{error}</div>}
           
             <p className='ifYouHaveAccount'>Don`t you have an account?<Link to="/">to register</Link></p>
             <button className='ButtCreateAcc' type='submit' onClick={handleLogin}><Link>Log Into</Link></button>
