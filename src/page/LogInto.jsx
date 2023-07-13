@@ -17,7 +17,8 @@ function LogInto() {
             <p className='regText'>Enter your parol</p>
             <input  className='regUser'/>
           </div>
-        </div>
+        </div >
+          
           <p className='ifYouHaveAccount'>Don`t you have an account?<Link to="/">to register</Link></p>
           <button className='ButtCreateAcc'><Link>Log Into</Link></button>
         </div>
