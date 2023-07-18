@@ -1,16 +1,18 @@
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
-
 import PersonStore from '../store/PersonStore';
+import UserStore from "../store/UserStore"
 import React, { useState } from 'react';
+import { observer } from "mobx-react-lite";
 
-function LogInto() {
+
+const LogInto= observer(()=> {
   const [userName, setUserName]=useState('')
   const [userPassword, setUserPassword]=useState('')
   const [isLoggedIn, setIsLoggedIn]=useState(false)
   const [error,setError]=useState(' ')
 
-  
+  // console.log(UserStore.setCurrentUser)
 
   const navigate=useNavigate();
   
@@ -19,7 +21,7 @@ function LogInto() {
     setUserName(inputValue);
   
     e.preventDefault();
-    console.log("userName=", inputValue);
+    // console.log("userName=", inputValue);
 
   };
 
@@ -36,8 +38,12 @@ function LogInto() {
     const user = PersonStore.people.find((person) => person.email === userName);
   
     if (user && user.parol === userPassword) {
-      console.log("we have this user");
+      // console.log("we have this user");
       setError("")
+      UserStore.setCurrentUser(user);
+// console.log(UserStore.currentUser);
+      navigate('/mainPage')
+      
     } else {
       console.log("we don't have this user");
       setError("Invalid login or password")
@@ -68,6 +74,6 @@ function LogInto() {
       </div>
     </div>
   );
-}
+})
 
 export default LogInto;

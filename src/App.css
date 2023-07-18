@@ -76,11 +76,14 @@ body{
 
 /* ___________main blok*/
 
+
+
 .topBorder{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 0px 20px;
+  
 }
 
 .WishListMain{
@@ -113,6 +116,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 40px 40px 0px 60px;
+  margin: 10px 50px 0px 50px;
 }
 
 .inputDescription{
@@ -124,10 +128,121 @@ body{
 
 .nameUserDesc{
   background-color:#845EC2;
-  width: 100px;
-  height: 25px;
+  width: 120px;
+  height: 30px;
   border-radius: 50px;
   margin: 15px 0px 0px 20px;
+  padding-top: 5px;
   color: #FEFEDF;
+  font-size: 20px;
 }
 
+.InputDescription{
+  background-color: #C493FF;
+  margin-top: 10px;
+  border: #845EC2;
+  width: 250px;
+  height: 220px;
+  border-radius: 50px;
+  color: #FEFEDF;
+  padding: 10px 10px 10px 10px;
+}
+
+
+
+/* ///////////////////// */
+.ButtonAlfPrice{
+  float: right;
+  margin-top: 50px;
+  margin-right: 20px;
+  /* margin-bottom: 40px; */
+}
+.WishList{
+  width: 100%;
+}
+
+.BFilter{
+  background-color: #00C9A7;
+  border: none;
+  color: #FEFEDF;
+  border-radius: 50px;
+  
+}
+
+
+.buttonAndTextList{
+  position: relative;
+  display: flex;
+  justify-self: center;
+
+ 
+}
+
+.MyWishText{
+  color: #00C9A7;
+  font-size: 40px;
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+  margin: 0 auto;
+  
+
+  
+}
+
+.MyWishButton{
+  background-color:#845EC2;
+  width: 120px;
+  height: 30px;
+  border-radius: 50px;
+  color: #FEFEDF;
+  font-size: 20px;
+  border: none;
+
+
+  margin-left: auto;
+  /* margin: 50px 30px 0px 0px;
+  position: absolute; */
+  /* right: 0; */
+}
+
+/* /////////////////////////////// */
+
+
+.WishList{
+  margin: 50px 0px 0px 0px;
+
+}
+
+.WishItem{
+  height: 40px;
+  margin: 10px 20px 20px 20px;
+  border-radius: 70px;
+
+
+  background-color: #C493FF;
+  color: #FEFEDF;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ItemName{
+  order: 1;
+  margin: 8px 0px 0px 20px;
+  font-size: 20px;
+  
+}
+
+.ItemPrice{
+  color: #845EC2;
+  order: 2;
+  margin: 8px 20px 0px 0px;
+  font-size: 20px;
+  font-stretch: wider;
+}
+
+
+.wishItemContainer{
+  margin-top: 100px;
+}

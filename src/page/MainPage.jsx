@@ -1,15 +1,29 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
 import TopBorder from '../component/TopBord';
-import UserInf from '../component/UserInf';
+import { observer } from "mobx-react-lite";
+import UserStore from '../store/UserStore';
+import UserMainInformation from '../component/UserMainInformation';
+import WishList from '../component/WishList';
 
-function MainPage() {
+const MainPage=observer(()=> {
+const currentUser=UserStore.currentUser
+
+
+if (!currentUser) {
+  return <div>Loading...</div>; // или другая заглушка в случае отсутствия текущего пользователя
+}
+
   return (
-    <div>
+    <div className='mainPlace'>
       <TopBorder/>
-      <UserInf />
+      <div className='mainContent'>
+        <UserMainInformation user={currentUser} />
+        <div className='spacer' />
+        <WishList user={currentUser} />
+      </div>
     </div>
   );
-}
+})
 
 export default MainPage;

@@ -6,11 +6,34 @@ class PersonStore{
     people=[
         {
             id:1, 
-            name:"John",
+            name:"Rimma",
             photo:"johne.jps",
-            description:"John`s description",
+            description:"Rimma`s description",
             email:"rimma@gmail.com",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    id:1,
+                    wishName:'car',
+                    price:120,
+                    deccription:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    id:2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    deccription:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    id:3,
+                    wishName:'lego',
+                    price:567,
+                    deccription:"alalalal",
+                    link:"http/........."
+                }
+            ]
 
         },
         {

@@ -1,4 +1,4 @@
-import { makeObservable, observable, action } from "mobx";
+import { makeAutoObservable, observable, action } from "mobx";
 
 
 class UserStore{
@@ -12,10 +12,12 @@ class UserStore{
     }
 
     constructor(){
-        makeObservable(this,{
+        makeAutoObservable(this,{
             currentUser:observable,
             setCurrentUser:action,
             clearCurrentUser:action,
         })
     }
 }
+
+export default new UserStore();
