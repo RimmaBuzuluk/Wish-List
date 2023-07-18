@@ -1,4 +1,4 @@
-import { useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import '../App.css';
 import { observer } from "mobx-react-lite";
 import PersonStore from '../store/PersonStore';
@@ -29,8 +29,42 @@ const WishInformation = observer(() => {
 
   return (
     <div className='NewWishList'>
-    {wish.wishName}
-    {wish.price}
+      <div className='header'>
+        <Link to={"/mainPage"}>
+          <button className='buttonBack'>Back</button>
+        </Link>
+        <div className='WishListText'>Wish List</div>
+      </div>
+      <div className='InfName'>Information about {user.name}`s wish</div>
+      <div className='WishInfList'>
+        <div className='AllInformWishs'>
+          {/* //////////////// */}
+          <div className='informNameBlock'>
+            <div className='infName'>Wish name</div>
+            <div className='InfBlock'>
+              <div className='InfB'>{wish.wishName}</div>
+              <button className='InfButt'>r</button>
+            </div>
+          </div>
+          {/* ////////////////////// */}
+          <div className='informNameBlock'>
+            <div className='infName'>Description wish</div>
+            <div className='InfBlock'>
+              <div className='InfB'>{wish.description}</div>
+              <button className='InfButt'>r</button>
+            </div>
+          </div>
+          {/* ////////////////////// */}
+          <div className='informNameBlock'>
+            <div className='infName'>Wish link</div>
+            <div className='InfBlock'>
+              <div className='InfB'>{wish.link}</div>
+              <button className='InfButt'>r</button>
+            </div>
+          </div>
+          {/* ////////////////////// */}
+        </div>
+      </div>
     </div>
   );
 });

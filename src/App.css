@@ -250,3 +250,92 @@ body{
 .wishItemContainer{
   margin-top: 100px;
 }
+
+
+
+/* //////////////wish information//////////////// */
+
+.NewWishList{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 40px; */
+}
+
+.WishListText{
+  margin-right: 0;
+  color: #845EC2;
+  font-size: 50px;
+  margin: 10px 30px 0px 0px;
+}
+
+.buttonBack{
+  margin-left: 0;
+  border:none;
+  background-color: #00C9A7;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 8px;
+  color:#FEFEDF;
+  font-size: 20px;
+}
+
+/* /// */
+.InfName{
+  margin-top:  50px;
+
+  color: #845EC2;
+  font-size: 30px;
+}
+
+/* ////// */
+
+.AllInformWishs{
+  margin: 50px 20px 20px 20px;
+}
+
+.informNameBlock{
+  margin: 20px 0px 10px 0px;
+}
+
+.infName{
+  color: #00C9A7;
+  margin-left: -600px;
+  font-size: 20px;
+}
+.InfBlock{
+  display: flex;
+  justify-content: space-between; /* Распределение элементов по контейнеру с отступом между ними */
+  align-items: left; 
+  
+}
+
+.InfB{
+  background-color: #C493FF;
+  width: 600px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50px;
+  color: #FEFEDF;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.InfButt{
+  background-color: #C493FF;
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-right: 150px;
+  border-radius: 50px;
+  color: #FEFEDF;
+  font-size: 30px;
+}

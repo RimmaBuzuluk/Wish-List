@@ -16,29 +16,29 @@ class PersonStore{
                     wishId: 1,
                     wishName: 'car',
                     price: 120,
-                    deccription: "alalalal",
+                    description:"alalalal",
                     link: "http/........."
                 },
                 {
                     wishId: 2,
                     wishName:'vacuum cleaner',
                     price:1320,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 },
                 {
                     wishId:3,
                     wishName:'lego',
                     price:567,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 },
                 {
                     wishId:4,
                     wishName:'apple',
                     price:567,
-                    deccription:"alalalal",
-                    link:"http/........."
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
                 }
             ]
 
@@ -55,28 +55,28 @@ class PersonStore{
                     id:1,
                     wishName:'iphone',
                     price:1200,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 },
                 {
                     id:2,
                     wishName:'vacuum cleaner',
                     price:1320,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 },
                 {
                     id:3,
                     wishName:'lego',
                     price:567,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 },
                 {
                     id:4,
                     wishName:'laptop',
                     price:5867,
-                    deccription:"alalalal",
+                    description:"alalalal",
                     link:"http/........."
                 }
             ]
