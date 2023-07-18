@@ -32,6 +32,13 @@ class PersonStore{
                     price:567,
                     deccription:"alalalal",
                     link:"http/........."
+                },
+                {
+                    id:4,
+                    wishName:'apple',
+                    price:567,
+                    deccription:"alalalal",
+                    link:"http/........."
                 }
             ]
 
@@ -63,6 +70,11 @@ class PersonStore{
     ];
 
     selectedPersonId=null;
+
+    sortWishlistAlphabetically(userId) {
+        const person = this.people.find((person) => person.id === userId);
+        person.wishList = person.wishList.sort((a, b) => a.wishName.localeCompare(b.wishName));
+      }
 
     constructor(){
         makeAutoObservable(this);
