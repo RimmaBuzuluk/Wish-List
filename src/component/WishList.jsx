@@ -7,19 +7,15 @@ import PersonStore from '../store/PersonStore';
 
 
 const WishList=observer(({ user })=> {
-  // const user=PersonStore.selectedPerson;
 
-  // const [sortBy, setSortBy]=useState(null)
 
-  const sortByAlphabet=()=>{
+  const [sortedWishList, setSortedWishList] = useState([...user.wishList]); // Додали стан для відсортованого списку
 
-    // const [sortBy, setSortBy] = useState(null);
-
-    const sortedList=[...user.wishList].sort((a,b)=>a.wishName.localeCompare(b.wishName))
-    // .sort((a,b)=>a.wishName.localeCompare(b.wishName));
-    PersonStore.sortWishlistAlphabetically(user.id)
-    console.log(sortedList)
-  }
+  const sortByAlphabet = () => {
+    const sortedList = [...user.wishList].sort((a, b) => a.wishName.localeCompare(b.wishName));
+    PersonStore.sortWishlistAlphabetically(user.id);
+    setSortedWishList(sortedList); // Встановлюємо відсортований список у стан
+  };
 
   
 //  const sortByPrice=()=>{
@@ -38,11 +34,10 @@ const WishList=observer(({ user })=> {
           {/* <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button> */}
         </div>
         <div className='wishItemContainer'>
-        {user.wishList.map((wishList) => (
-    
-    <WishItem  key={wishList.id} wishList={wishList}/>
-))}
-        </div>
+      {sortedWishList.map((wishList) => (
+        <WishItem key={wishList.id} wishList={wishList} />
+      ))}
+    </div>
     </div>
   );
 })

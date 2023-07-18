@@ -2,8 +2,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import PersonStore from '../store/PersonStore';
 import UserStore from "../store/UserStore"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { observer } from "mobx-react-lite";
+import Cookies from 'js-cookie';
 
 
 const LogInto= observer(()=> {
@@ -12,16 +13,26 @@ const LogInto= observer(()=> {
   const [isLoggedIn, setIsLoggedIn]=useState(false)
   const [error,setError]=useState(' ')
 
-  // console.log(UserStore.setCurrentUser)
 
   const navigate=useNavigate();
+
+
+  useEffect(()=>{
+    const userCredentials=Cookies.get('loggedInUser')
+    if(userCredentials){
+      const user=JSON.parse(userCredentials);
+      UserStore.setCurrentUser(user);
+      setIsLoggedIn(true)
+      navigate('/mainPage')
+    }
+  },[])
   
   const HandleChange = (e) => {
     const inputValue = e.target.value;
     setUserName(inputValue);
   
     e.preventDefault();
-    // console.log("userName=", inputValue);
+
 
   };
 
@@ -38,11 +49,12 @@ const LogInto= observer(()=> {
     const user = PersonStore.people.find((person) => person.email === userName);
   
     if (user && user.parol === userPassword) {
-      // console.log("we have this user");
       setError("")
       UserStore.setCurrentUser(user);
-// console.log(UserStore.currentUser);
       navigate('/mainPage')
+
+      //cookie file save
+      Cookies.set('loggedInUser', JSON.stringify(user), { expires: 7 })
       
     } else {
       console.log("we don't have this user");
