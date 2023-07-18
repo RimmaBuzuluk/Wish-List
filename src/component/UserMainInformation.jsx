@@ -1,5 +1,4 @@
 import '../App.css';
-import TopBorder from './TopBord';
 
 function UserMainInformation({user}) {
     

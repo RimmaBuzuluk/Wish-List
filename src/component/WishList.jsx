@@ -18,10 +18,11 @@ const WishList=observer(({ user })=> {
   };
 
   
-//  const sortByPrice=()=>{
-//     const sortedList=[...user.wishList].sort((a,b)=>a.price-b.price);
-//     setSortBy(sortedList)
-//   } 
+ const sortByPrice=()=>{
+  const sortedList = [...user.wishList].sort((a, b) => a.price - b.price)
+  PersonStore.sortWishlistPrice(user.id)
+  setSortedWishList(sortedList)
+  } 
     
   return (
     <div className='WishList'>
@@ -30,8 +31,8 @@ const WishList=observer(({ user })=> {
             <button className='MyWishButton'>NEW</button>
         </div>
         <div className='ButtonAlfPrice'>
-          <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alfavit</button>
-          {/* <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button> */}
+          <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
+          <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>
         </div>
         <div className='wishItemContainer'>
       {sortedWishList.map((wishList) => (

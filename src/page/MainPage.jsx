@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
-import TopBorder from '../component/TopBord';
+
 import { observer } from "mobx-react-lite";
 import UserStore from '../store/UserStore';
 import UserMainInformation from '../component/UserMainInformation';
 import WishList from '../component/WishList';
+import TopBorder from '../component/TopBordrder';
 
 const MainPage=observer(()=> {
 const currentUser=UserStore.currentUser

@@ -208,39 +208,43 @@ body{
 
 /* /////////////////////////////// */
 
+.link {
+  text-decoration: none; 
+  color: #FEFEDF; 
+}
+
 
 .WishList{
   margin: 50px 0px 0px 0px;
 
 }
 
-.WishItem{
+.WishItem {
   height: 40px;
   margin: 10px 20px 20px 20px;
   border-radius: 70px;
-
-
   background-color: #C493FF;
-  color: #FEFEDF;
-
   display: flex;
   justify-content: space-between;
 }
 
-.ItemName{
+
+
+.ItemName {
   order: 1;
   margin: 8px 0px 0px 20px;
   font-size: 20px;
-  
 }
 
-.ItemPrice{
+.ItemPrice {
   color: #845EC2;
   order: 2;
   margin: 8px 20px 0px 0px;
   font-size: 20px;
   font-stretch: wider;
 }
+
+
 
 
 .wishItemContainer{
