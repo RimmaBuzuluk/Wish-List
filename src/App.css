@@ -393,9 +393,23 @@ body{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 
+  position: relative;
+
+}
+
+.checkMarkContainer {
+  position: absolute;
+  top: 1px;
+  right: 1px; 
 }
 
 .UserSearchName{
   color: #845EC2;
   font-size: 20px;
+}
+
+
+.checkMark {
+  font-size: 50px;
+  color: green;
 }
