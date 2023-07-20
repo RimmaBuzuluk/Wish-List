@@ -100,33 +100,33 @@ class PersonStore{
         {
             id:5, 
             name:"Ron",
-            photo:"https://abrakadabra.fun/uploads/posts/2021-12/1639417324_2-abrakadabra-fun-p-krasivie-avi-zhivotnikh-2.jpg",
+            photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu4Sycdwjt8svmmwHVv3V9XUp0a91sfrT_vxStmOCVWPbKFv7pUMeyYM7gU-V9Tz6BFso&usqp=CAU",
             description:"Ron`s description",
             email:"RonLi",
             parol:"lalal"
         },
         {
             id:6, 
-            name:"Bob",
-            photo:"https://hypeava.ru/uploads/posts/2018-03/1521122114_2.png",
+            name:"Katerina",
+            photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIz-SQ-YT4OHylkJbBP4slJcBsBX4CU1JT5w&usqp=CAU",
             description:"Bob`s description",
             email:"BobLi",
             parol:"lalal"
         },
         {
             id:7, 
-            name:"Ron",
-            photo:"https://abrakadabra.fun/uploads/posts/2021-12/1639417324_2-abrakadabra-fun-p-krasivie-avi-zhivotnikh-2.jpg",
+            name:"Roman",
+            photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQbYfm9QNvieeDpHkYWmnT8O2niBd5nYLvLg&usqp=CAU",
             description:"Ron`s description",
             email:"RonLi",
             parol:"lalal"
         },
         {
             id:8, 
-            name:"Bob",
-            photo:"https://hypeava.ru/uploads/posts/2018-03/1521122114_2.png",
+            name:"Viktor",
+            photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwHAWiGLSZ-cP9ndJCx5PAmIjm3xCy9VynWw&usqp=CAU",
             description:"Bob`s description",
-            email:"BobLi",
+            email:"VictorLi",
             parol:"lalal"
         }
     ];
