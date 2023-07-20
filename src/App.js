@@ -5,6 +5,7 @@ import MainPage from './page/MainPage';
 import Registration from './page/Registration';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import WishInformation from './page/WishInformation';
+import SerchUser from './page/SerchUser';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/logInto" element={<LogInto />} />
           <Route path='/mainPage' element={<MainPage />} />
           <Route path='/wishId/:wishId' element={<WishInformation />} />
-
+          <Route path='/serchPage' element={<SerchUser/>}/>
         </Routes>
       </Router>
     </div>

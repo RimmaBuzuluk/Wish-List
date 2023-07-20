@@ -3,6 +3,7 @@ import '../App.css';
 import { observer } from "mobx-react-lite";
 import PersonStore from '../store/PersonStore';
 import UserStore from '../store/UserStore';
+import ButBackTextWish from '../component/ButBacktTextWish';
 
 const WishInformation = observer(() => {
   const { wishId } = useParams();
@@ -29,12 +30,7 @@ const WishInformation = observer(() => {
 
   return (
     <div className='NewWishList'>
-      <div className='header'>
-        <Link to={"/mainPage"}>
-          <button className='buttonBack'>Back</button>
-        </Link>
-        <div className='WishListText'>Wish List</div>
-      </div>
+      <ButBackTextWish/>
       <div className='InfName'>Information about {user.name}`s wish</div>
       <div className='WishInfList'>
         <div className='AllInformWishs'>
@@ -43,6 +39,14 @@ const WishInformation = observer(() => {
             <div className='infName'>Wish name</div>
             <div className='InfBlock'>
               <div className='InfB'>{wish.wishName}</div>
+              <button className='InfButt'>r</button>
+            </div>
+          </div>
+          {/* ////////////////////// */}
+          <div className='informNameBlock'>
+            <div className='infName'>Price wish</div>
+            <div className='InfBlock'>
+              <div className='InfB'>{wish.price}</div>
               <button className='InfButt'>r</button>
             </div>
           </div>
