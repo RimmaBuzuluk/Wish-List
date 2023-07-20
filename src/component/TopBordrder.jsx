@@ -6,7 +6,7 @@ function TopBorder() {
   return (
     <div className='topBorder'>
       <p className='WishListMain'>Wish List</p>
-      <Link to='/serchPage' className='buttSerch'>Search</Link>
+      <Link to='/searchPage' className='buttSearch'>Search</Link>
     </div>
   );
 }

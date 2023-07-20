@@ -9,7 +9,7 @@ const UserItem = observer(({person}) =>{
         <div>
             <img src={person.photo}/>
         </div>
-        <div className='UserSerchName'>
+        <div className='UserSearchName'>
             {person.name}
         </div>
     </div>

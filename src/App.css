@@ -92,7 +92,7 @@ body{
   font-size: 30px;
 }
 
-.buttSerch{
+.buttSearch{
   margin-left: auto;
   border:none;
   background-color:#845EC2;
@@ -342,52 +342,60 @@ body{
 
 
 
-/* //////serch/////////// */
-.TextSerchUser{
-  color:#C493FF;
+/* //////search/////////// */
+
+ .TextSearchUser {
+  color: #c493ff;
   font-size: 50px;
-  margin-top: 30px;
+  margin-top:0 px;
 }
 
-
-.SerchInput{
+ .SearchInput {
   border: none;
-  background-color: #00C9A7;
+  background-color: #00c9a7;
   width: 700px;
   height: 30px;
   border-radius: 50px;
-  margin-top: 30px;
   margin-bottom: 20px;
+  margin-top: 50px;
+  padding-left: 10px;
 }
 
-
-.UserList {
+.UserItemList{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.UserItem {
-  padding: 16px;
-  margin-bottom: 20px;
-  margin: 10px 20px 10px 20px;
-  border: 1px solid #C493FF;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
   
 }
 
-.UserSerchName {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #845EC2;
+ .UserItem{
+  /* width: 33.33%;  */
+  box-sizing: border-box;
+  border: none;
+  padding: 10px;
+ }
+
+ .SearchUser img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
 }
 
 
-.SerchUser img {
-  width: 200px;
-  height: 250px; /* Встановіть фіксову висоту для картинки */
-  object-fit: cover;
-  object-position: center;
+
+.UserItem {
+  padding: 16px;
+  width: 300px;
+  height: 300px;
+  margin: 10px 5px 20px 5px;
+  border: 1px solid #c493ff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+.UserSearchName{
+  color: #845EC2;
+  font-size: 20px;
 }
