@@ -19,7 +19,7 @@ function App() {
           <Route path="/logInto" element={<LogInto />} key="logInto"/>
           <Route path='/mainPage' element={<MainPage />} key="mainPage"/>
           <Route path='/wishId/:wishId' element={<WishInformation />} key="wishInformation" />
-          {/* <Route path='/searchPage' element={<SearchUser/>}/> key="searchUer"*/}
+          <Route path='/searchPage' element={<SearchUser/>}/> key="searchUer"
         </Routes>
       </Router>
     </div>
