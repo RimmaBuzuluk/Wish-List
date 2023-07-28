@@ -31,7 +31,7 @@ const WishList = observer(({ user }) => {
       </div>
       <div className='wishItemContainer'>
         {sortedWishList.map((wishList) => (
-          <WishItem key={wishList.id} wishList={wishList} /> // Кожен елемент списку має унікальний ключ
+          <WishItem key={wishList.wishId} wishList={wishList} /> // Кожен елемент списку має унікальний ключ
         ))}
       </div>
     </div>

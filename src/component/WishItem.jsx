@@ -3,7 +3,7 @@ import '../App.css';
 import { observer } from "mobx-react-lite";
 
 const WishItem = observer(({ wishList }) => {
-  console.log(wishList. wishId)
+  console.log(wishList.wishId)
   return (
     <div className=''>
       <Link to={`/wishId/${wishList.wishId}`} className='link WishItem' key={wishList.wishId}>
