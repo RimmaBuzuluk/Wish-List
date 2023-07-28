@@ -15,11 +15,11 @@ function App() {
       <Router>
       <MainTopBorder/>
         <Routes>
-          <Route path="/" element={<Registration />} />
-          <Route path="/logInto" element={<LogInto />} />
-          <Route path='/mainPage' element={<MainPage />} />
-          <Route path='/wishId/:wishId' element={<WishInformation />} />
-          <Route path='/searchPage' element={<SearchUser/>}/>
+          <Route path="/" element={<Registration />} key="Registration"/>
+          <Route path="/logInto" element={<LogInto />} key="logInto"/>
+          <Route path='/mainPage' element={<MainPage />} key="mainPage"/>
+          <Route path='/wishId/:wishId' element={<WishInformation />} key="wishInformation" />
+          {/* <Route path='/searchPage' element={<SearchUser/>}/> key="searchUer"*/}
         </Routes>
       </Router>
     </div>

@@ -126,8 +126,38 @@ class PersonStore{
             name:"Viktor",
             photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwHAWiGLSZ-cP9ndJCx5PAmIjm3xCy9VynWw&usqp=CAU",
             description:"Bob`s description",
-            email:"VictorLi",
-            parol:"lalal"
+            email:"Viktor@gmail.com",
+            parol:"19111999",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'bmv',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'playstation',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         }
     ];
 
