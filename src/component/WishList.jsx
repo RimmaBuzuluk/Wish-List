@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import WishItem from './WishItem';
 import { useState } from 'react';
 import PersonStore from '../store/PersonStore';
+import AddNewWish from './AddNewWish';
 
 const WishList = observer(({ user }) => {
   const [sortedWishList, setSortedWishList] = useState([...user.wishList]);
@@ -25,6 +26,12 @@ const WishList = observer(({ user }) => {
     
   }
   
+  const updeteWishList=()=>{
+    setSortedWishList([...user.wishList])
+  }
+
+ 
+
 
   return (
     <div className='WishList'>
@@ -32,7 +39,7 @@ const WishList = observer(({ user }) => {
         <h3 className='MyWishText'>My wish list</h3>
         <button className='MyWishButton' onClick={handleAdd}>NEW</button>
       </div>
-      {(addWish) && <div style={{color:'red'}}>hello</div>}
+      {(addWish) && <div><AddNewWish onUpdateWishList={updeteWishList}/></div>}
       <div className='ButtonAlfPrice'>
         <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
         <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>

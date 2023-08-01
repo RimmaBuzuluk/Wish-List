@@ -22,7 +22,7 @@ const WishInformation = observer(() => {
 
   const wish = user.wishList.find((wish) => wish.wishId === parseInt(wishId));
 
-  console.log(wish)
+  // console.log(wish)
 
   if (!wish) {
     return <div>Бажання не знайдено.</div>;

@@ -8,7 +8,7 @@ const UserItem = observer(({person}) =>{
 
   const isCurrentUser=person.id===UserStore.currentUser.id
 
-  console.log(UserStore.currentUser)
+  // console.log(UserStore.currentUser)
   return (
     <div className='UserItem'>
       <div className='checkMarkContainer'>

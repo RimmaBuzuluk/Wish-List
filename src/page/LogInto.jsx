@@ -46,7 +46,7 @@ const LogInto = observer(() => {
 
       navigate('/mainPage');
     } else {
-      console.log("we don't have this user");
+      // console.log("we don't have this user");
       setError("Invalid login or password");
     }
   };
