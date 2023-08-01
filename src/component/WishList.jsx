@@ -6,6 +6,7 @@ import PersonStore from '../store/PersonStore';
 
 const WishList = observer(({ user }) => {
   const [sortedWishList, setSortedWishList] = useState([...user.wishList]);
+  const [addWish,setAddWish]=useState(false)
 
   const sortByAlphabet = () => {
     const sortedList = [...user.wishList].sort((a, b) => a.wishName.localeCompare(b.wishName));
@@ -19,12 +20,19 @@ const WishList = observer(({ user }) => {
     setSortedWishList(sortedList)
   }
 
+  const handleAdd=()=>{
+    setAddWish((preveState)=> !preveState)
+    
+  }
+  
+
   return (
     <div className='WishList'>
       <div className='buttonAndTextList'>
         <h3 className='MyWishText'>My wish list</h3>
-        <button className='MyWishButton'>NEW</button>
+        <button className='MyWishButton' onClick={handleAdd}>NEW</button>
       </div>
+      {(addWish) && <div style={{color:'red'}}>hello</div>}
       <div className='ButtonAlfPrice'>
         <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
         <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>
