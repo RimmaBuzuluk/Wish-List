@@ -9,12 +9,14 @@ const WishItem = observer(({ wishList,onDelete }) => {
   }
   
   return (
-    <div className='wishItemContainer'>
-      <Link to={`/wishId/${wishList.wishId}`} className='link WishItem' key={wishList.wishId}>
-        <div className='ItemName'>{wishList.wishName}</div>
-        <div className='ItemPrice'>{wishList.price} грн</div>
-      </Link>
-      <button onClick={handleDel}>Delete</button>
+    <div className='wishItemWrapper'>
+      <div className='linkItem'>
+        <Link to={`/wishId/${wishList.wishId}`} className='link WishItem' key={wishList.wishId}>
+          <div className='ItemName'>{wishList.wishName}</div>
+          <div className='ItemPrice'>{wishList.price} грн</div>
+        </Link>
+      </div>
+        <button onClick={handleDel} className='buttonItem'>Delete</button>
     </div>
   );
 })

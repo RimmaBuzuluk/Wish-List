@@ -185,9 +185,6 @@ body{
   left: 50%;
   transform: translateX(-50%); */
   margin: 0 auto;
-  
-
-  
 }
 
 .MyWishButton{
@@ -208,24 +205,33 @@ body{
 
 /* /////////////////////////////// */
 
+.wishItemContainer{
+  margin-top: 100px;
+}
+
 .link {
   text-decoration: none; 
   color: #FEFEDF; 
 }
 
-
-.WishList{
-  margin: 50px 0px 0px 0px;
-
+.linkItem{
+  display: flex;
 }
+
+
+ .wishItemWrapper{
+  display: flex;
+ 
+ }
 
 .WishItem {
   height: 40px;
-  margin: 10px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
   border-radius: 70px;
   background-color: #C493FF;
   display: flex;
   justify-content: space-between;
+  width: 800px;
 }
 
 
@@ -234,6 +240,7 @@ body{
   order: 1;
   margin: 8px 0px 0px 20px;
   font-size: 20px;
+  color: #FEFEDF;
 }
 
 .ItemPrice {
@@ -244,19 +251,13 @@ body{
   font-stretch: wider;
 }
 
-
-
-
-.wishItemContainer{
-  margin-top: 100px;
+.buttonItem{
+  background-color: #845EC2;
+  border: none;
+  border-radius: 50px;
+  color: #FEFEDF;
+  height: 40px;
 }
-
-/* .wishItemContainer {
-  display: flex;
-  /* align-items: center;  */
- */
-
-
 
 /* //////////////wish information//////////////// */
 

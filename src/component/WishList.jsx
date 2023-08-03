@@ -52,7 +52,7 @@ const WishList = observer(({ user }) => {
       </div>
       <div className='wishItemContainer'>
         {sortedWishList.map((wishList) => (
-          <WishItem key={wishList.wishId} wishList={wishList} onDelete={handleDelete}/> // Кожен елемент списку має унікальний ключ
+          <WishItem key={wishList.wishId} wishList={wishList} onDelete={handleDelete}/>
         ))}
       </div>
     </div>

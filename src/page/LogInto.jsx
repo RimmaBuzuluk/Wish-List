@@ -33,7 +33,7 @@ const LogInto = observer(() => {
   }, []);
 
   const handleLogin = (e) => {
-    debugger
+    
     e.preventDefault();
     const user = PersonStore.people.find((person) => person.email === userName);
 
