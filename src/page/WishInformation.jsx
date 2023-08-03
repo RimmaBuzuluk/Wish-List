@@ -7,6 +7,7 @@ import ButBackTextWish from '../component/ButBacktTextWish';
 
 const WishInformation = observer(() => {
   const { wishId } = useParams();
+  
 
   // console.log(wishId)
 

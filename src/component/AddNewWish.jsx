@@ -4,7 +4,7 @@ import PersonStore from '../store/PersonStore';
 import UserStore from '../store/UserStore';
 import { useState } from 'react';
 
-const AddNewWish = observer(({onUpdateWishList}) => {
+const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}) => {
 
     const user=UserStore.currentUser
     // console.log(user)
@@ -18,15 +18,15 @@ const AddNewWish = observer(({onUpdateWishList}) => {
     const handleAdd = () => {
         if (newName.trim() !== "" && newPrice.trim() !==""  && newDescription.trim()!=="" && newLink.trim() !=="") {
           const newWish = {
-            wishId: Math.random(),
+            wishId: wishIdCounter,
             wishName: newName,
-            price:newPrice,
-            description:newDescription,
-            link:newLink
-
+            price: newPrice,
+            description: newDescription,
+            link: newLink
           };
 
           PersonStore.addWish(user.id, newWish)
+          setWishIdCounter((prevCounter)=>prevCounter+1)
         
           setNewName("");
           setNewPrice("");

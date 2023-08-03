@@ -4,10 +4,14 @@ import WishItem from './WishItem';
 import { useState } from 'react';
 import PersonStore from '../store/PersonStore';
 import AddNewWish from './AddNewWish';
+import UserStore from '../store/UserStore';
 
 const WishList = observer(({ user }) => {
   const [sortedWishList, setSortedWishList] = useState([...user.wishList]);
   const [addWish,setAddWish]=useState(false)
+  const [wishIdCounter, setWishIdCounter]=useState(5)
+
+  console.log("user",UserStore.currentUser)
 
   const sortByAlphabet = () => {
     const sortedList = [...user.wishList].sort((a, b) => a.wishName.localeCompare(b.wishName));
@@ -30,8 +34,6 @@ const WishList = observer(({ user }) => {
     setSortedWishList([...user.wishList])
   }
 
- 
-
 
   return (
     <div className='WishList'>
@@ -39,7 +41,7 @@ const WishList = observer(({ user }) => {
         <h3 className='MyWishText'>My wish list</h3>
         <button className='MyWishButton' onClick={handleAdd}>NEW</button>
       </div>
-      {(addWish) && <div><AddNewWish onUpdateWishList={updeteWishList}/></div>}
+      {(addWish) && <div><AddNewWish onUpdateWishList={updeteWishList} wishIdCounter={wishIdCounter} setWishIdCounter={setWishIdCounter}/></div>}
       <div className='ButtonAlfPrice'>
         <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
         <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>
