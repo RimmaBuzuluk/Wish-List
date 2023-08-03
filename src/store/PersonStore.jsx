@@ -182,13 +182,20 @@ class PersonStore{
 
     addWish(personId, newWish) {
         const person = this.people.find((p) => p.id === personId);
-        console.log(person)
+        // console.log(person)
         if (person) {
           person.wishList.push(newWish);
-          console.log(person)
+        //   console.log(person)
         }
         
       }
+
+    removeWishItem(personId, id){
+        const person=this.people.find((p)=>p.id===personId)
+        if(person){
+            person.wishList=person.wishList.filter((item)=>item.id !==id)
+        }
+    } 
 
     selectedPerson(id){
         this.selectedPersonId=id

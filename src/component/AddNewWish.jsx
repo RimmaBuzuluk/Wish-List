@@ -40,7 +40,7 @@ const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}
 
   return (
     <div className='AddNewWish'>
-        <h3>Add new wish</h3>
+        <h3 >Add new wish</h3>
         <div>
             <div>
                 <div>add wish name</div>

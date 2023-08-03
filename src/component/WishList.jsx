@@ -11,8 +11,6 @@ const WishList = observer(({ user }) => {
   const [addWish,setAddWish]=useState(false)
   const [wishIdCounter, setWishIdCounter]=useState(5)
 
-  console.log("user",UserStore.currentUser)
-
   const sortByAlphabet = () => {
     const sortedList = [...user.wishList].sort((a, b) => a.wishName.localeCompare(b.wishName));
     PersonStore.sortWishlistAlphabetically(user.id);
@@ -29,11 +27,17 @@ const WishList = observer(({ user }) => {
     setAddWish((preveState)=> !preveState)
     
   }
+
+  const handleDelete=(wishId)=>{
+    PersonStore.removeWishItem(user.id, wishId)
+    setSortedWishList(sortedWishList.filter((wish)=>wish.wishId !==wishId))
+  }
   
   const updeteWishList=()=>{
     setSortedWishList([...user.wishList])
   }
 
+ 
 
   return (
     <div className='WishList'>
@@ -48,7 +52,7 @@ const WishList = observer(({ user }) => {
       </div>
       <div className='wishItemContainer'>
         {sortedWishList.map((wishList) => (
-          <WishItem key={wishList.wishId} wishList={wishList} /> // Кожен елемент списку має унікальний ключ
+          <WishItem key={wishList.wishId} wishList={wishList} onDelete={handleDelete}/> // Кожен елемент списку має унікальний ключ
         ))}
       </div>
     </div>

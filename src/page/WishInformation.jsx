@@ -7,9 +7,7 @@ import ButBackTextWish from '../component/ButBacktTextWish';
 
 const WishInformation = observer(() => {
   const { wishId } = useParams();
-  
 
-  // console.log(wishId)
 
   const user = UserStore.currentUser;
 
@@ -22,8 +20,6 @@ const WishInformation = observer(() => {
   }
 
   const wish = user.wishList.find((wish) => wish.wishId === parseInt(wishId));
-
-  // console.log(wish)
 
   if (!wish) {
     return <div>Бажання не знайдено.</div>;
@@ -69,7 +65,7 @@ const WishInformation = observer(() => {
           </div>
           {/* ////////////////////// */}
         </div>
-      </div>
+      </div> 
     </div>
   );
 });
