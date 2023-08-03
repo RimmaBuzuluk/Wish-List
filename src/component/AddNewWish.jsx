@@ -40,27 +40,27 @@ const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}
 
   return (
     <div className='AddNewWish'>
-        <h3 >Add new wish</h3>
+        <h3 className='AddNewWishH3'>Add new wish</h3>
         <div>
-            <div>
-                <div>add wish name</div>
-                <input value={newName} onChange={(e)=>setNewName(e.target.value)}/>
+            <div className='InpTextNewWish'>
+                <div className='textNewWish'>add wish name</div>
+                <input className="inputNewWish" value={newName} onChange={(e)=>setNewName(e.target.value)}/>
             </div>
-            <div>
-                <div>add wish price </div>
-                <input value={newPrice} onChange={(e)=>setNewPrice(e.target.value)}/>
+            <div className='InpTextNewWish'>
+                <div className='textNewWish'>add wish price </div>
+                <input className="inputNewWish" value={newPrice} onChange={(e)=>setNewPrice(e.target.value)}/>
             </div>
-            <div>
-                <div>add wish description</div>
-                <input value={newDescription} onChange={(e)=>setNewDescription(e.target.value)}/>
+            <div className='InpTextNewWish'>
+                <div className='textNewWish'>add wish description</div>
+                <input className="inputNewWish" value={newDescription} onChange={(e)=>setNewDescription(e.target.value)}/>
             </div>
-            <div>
-                <div>add wish link</div>
-                <input value={newLink} onChange={(e)=>setNewLink(e.target.value)} />
+            <div className='InpTextNewWish'>
+                <div className='textNewWish'>add wish link</div>
+                <input className="inputNewWish" value={newLink} onChange={(e)=>setNewLink(e.target.value)} />
             </div>
             
         </div>
-        <button onClick={handleAdd}>add</button>
+        <button className='ButtonNewWish' onClick={handleAdd}>Add</button>
     </div>
   );
 })

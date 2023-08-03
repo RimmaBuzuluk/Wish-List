@@ -181,9 +181,6 @@ body{
 .MyWishText{
   color: #00C9A7;
   font-size: 40px;
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
   margin: 0 auto;
 }
 
@@ -231,10 +228,8 @@ body{
   background-color: #C493FF;
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  width: 1000px;
 }
-
-
 
 .ItemName {
   order: 1;
@@ -293,7 +288,6 @@ body{
   font-size: 20px;
 }
 
-/* /// */
 .InfName{
   margin-top:  50px;
 
@@ -301,7 +295,6 @@ body{
   font-size: 30px;
 }
 
-/* ////// */
 
 .AllInformWishs{
   margin: 50px 20px 20px 20px;
@@ -318,8 +311,7 @@ body{
 }
 .InfBlock{
   display: flex;
-  justify-content: space-between; /* Распределение элементов по контейнеру с отступом между ними */
-  align-items: left; 
+  justify-content: space-between; 
   
 }
 
@@ -374,7 +366,6 @@ body{
 }
 
  .UserItem{
-  /* width: 33.33%;  */
   box-sizing: border-box;
   border: none;
   padding: 10px;
@@ -386,8 +377,6 @@ body{
   object-fit: cover;
   object-position: center;
 }
-
-
 
 .UserItem {
   padding: 16px;
@@ -418,4 +407,35 @@ body{
 .checkMark {
   font-size: 50px;
   color: green;
+}
+
+/* ////////add new wish////////// */
+
+.AddNewWishH3{
+  color: #845EC2;
+}
+
+.InpTextNewWish{
+  margin-bottom: 20px;
+}
+
+.textNewWish{
+  color: #C493FF;
+}
+
+.inputNewWish{
+  border-color: #00C9A7;
+  border-radius: 50px;
+  width: 300px;
+  height: 20px;
+}
+
+.ButtonNewWish{
+  border: none;
+  background-color: #845EC2;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  color: #FEFEDF;
+  font-size: 20px;
 }
