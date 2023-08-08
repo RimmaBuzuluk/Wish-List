@@ -330,10 +330,10 @@ class PersonStore{
         });
     }
 
-    addWish(personId, newWish) {
+    addWish(personId, newWish,newList) {
         const person = this.people.find((p) => p.id === personId);
         if (person) {
-          person.wishList.push(newWish);
+          newList.push(newWish);
         }
         
       }

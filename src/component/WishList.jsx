@@ -38,6 +38,7 @@ const WishList = observer(({ user }) => {
   }
 
  
+ 
 
   return (
     <div className='WishList'>
@@ -45,7 +46,7 @@ const WishList = observer(({ user }) => {
         <h3 className='MyWishText'>My wish list</h3>
         <button className='MyWishButton' onClick={handleAdd}>NEW</button>
       </div>
-      {(addWish) && <div><AddNewWish onUpdateWishList={updeteWishList} wishIdCounter={wishIdCounter} setWishIdCounter={setWishIdCounter}/></div>}
+      {(addWish) && <div><AddNewWish sortedWishList={sortedWishList} onUpdateWishList={updeteWishList} wishIdCounter={wishIdCounter} setWishIdCounter={setWishIdCounter}/></div>}
       <div className='ButtonAlfPrice'>
         <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
         <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>

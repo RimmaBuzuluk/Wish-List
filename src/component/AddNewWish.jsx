@@ -4,7 +4,7 @@ import PersonStore from '../store/PersonStore';
 import UserStore from '../store/UserStore';
 import { useState } from 'react';
 
-const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}) => {
+const AddNewWish = observer(({ onUpdateWishList, wishIdCounter, setWishIdCounter, sortedWishList, setSortedWishList }) => {
 
     const user=UserStore.currentUser
     // console.log(user)
@@ -24,8 +24,9 @@ const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}
             description: newDescription,
             link: newLink
           };
+          
 
-          PersonStore.addWish(user.id, newWish)
+          PersonStore.addWish(user.id, newWish, sortedWishList)
           setWishIdCounter((prevCounter)=>prevCounter+1)
         
           setNewName("");
@@ -33,7 +34,8 @@ const AddNewWish = observer(({onUpdateWishList, wishIdCounter, setWishIdCounter}
           setNewDescription("");
           setNewLink("");
 
-          onUpdateWishList();
+          // onUpdateWishList(newWish);
+          // setSortedWishList([...sortedWishList, newWish]);
         }
       };
 
