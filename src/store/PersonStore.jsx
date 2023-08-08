@@ -87,7 +87,37 @@ class PersonStore{
             photo:"https://abrakadabra.fun/uploads/posts/2021-12/1639417324_2-abrakadabra-fun-p-krasivie-avi-zhivotnikh-2.jpg",
             description:"Ron`s description",
             email:"RonLi",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'apple',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         },
         {
             id:4, 
@@ -95,7 +125,37 @@ class PersonStore{
             photo:"https://hypeava.ru/uploads/posts/2018-03/1521122114_2.png",
             description:"Bob`s description",
             email:"BobLi",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'apple',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         },
         {
             id:5, 
@@ -103,7 +163,37 @@ class PersonStore{
             photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu4Sycdwjt8svmmwHVv3V9XUp0a91sfrT_vxStmOCVWPbKFv7pUMeyYM7gU-V9Tz6BFso&usqp=CAU",
             description:"Ron`s description",
             email:"RonLi",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'apple',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         },
         {
             id:6, 
@@ -111,7 +201,37 @@ class PersonStore{
             photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIz-SQ-YT4OHylkJbBP4slJcBsBX4CU1JT5w&usqp=CAU",
             description:"Bob`s description",
             email:"BobLi",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'apple',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         },
         {
             id:7, 
@@ -119,7 +239,37 @@ class PersonStore{
             photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQbYfm9QNvieeDpHkYWmnT8O2niBd5nYLvLg&usqp=CAU",
             description:"Ron`s description",
             email:"RonLi",
-            parol:"lalal"
+            parol:"lalal",
+            wishList:[
+                {
+                    wishId: 1,
+                    wishName: 'car',
+                    price: 120,
+                    description:"alalalal",
+                    link: "http/........."
+                },
+                {
+                    wishId: 2,
+                    wishName:'vacuum cleaner',
+                    price:1320,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:3,
+                    wishName:'lego',
+                    price:567,
+                    description:"alalalal",
+                    link:"http/........."
+                },
+                {
+                    wishId:4,
+                    wishName:'apple',
+                    price:567,
+                    description:"alalalal",
+                    link:"https://auto.ria.com/uk/newauto/auto-nissan-juke-1897326.html"
+                }
+            ]
         },
         {
             id:8, 

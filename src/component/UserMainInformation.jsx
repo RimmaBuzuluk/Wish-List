@@ -1,4 +1,5 @@
 import '../App.css';
+import UserStore from '../store/UserStore';
 
 function UserMainInformation({user}) {
     

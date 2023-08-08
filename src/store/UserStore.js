@@ -11,11 +11,23 @@ class UserStore{
         this.currentUser=null;
     }
 
+    currentUserGuest=null;
+
+    setCurrentUserGuest(user){
+        this.currentUserGuest=user
+    }
+    clearCurrentUserGuest(){
+        this.currentUserGuest=null;
+    }
+
     constructor(){
         makeAutoObservable(this,{
             currentUser:observable,
             setCurrentUser:action,
             clearCurrentUser:action,
+            currentUserGuest:observable,
+            setCurrentUserGuest:action,
+            clearCurrentUserGuest:action,
         })
     }
 }
