@@ -332,10 +332,8 @@ class PersonStore{
 
     addWish(personId, newWish) {
         const person = this.people.find((p) => p.id === personId);
-        // console.log(person)
         if (person) {
           person.wishList.push(newWish);
-        //   console.log(person)
         }
         
       }

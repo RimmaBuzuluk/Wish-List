@@ -12,13 +12,13 @@ const WishList = observer(({ user }) => {
   const [wishIdCounter, setWishIdCounter]=useState(5)
 
   const sortByAlphabet = () => {
-    const sortedList = [...user.wishList].sort((a, b) => a.wishName.localeCompare(b.wishName));
+    const sortedList = sortedWishList.sort((a, b) => a.wishName.localeCompare(b.wishName));
     PersonStore.sortWishlistAlphabetically(user.id);
     setSortedWishList(sortedList);
   };
 
   const sortByPrice = () => {
-    const sortedList = [...user.wishList].sort((a, b) => a.price - b.price)
+    const sortedList = sortedWishList.sort((a, b) => a.price - b.price)
     PersonStore.sortWishlistPrice(user.id)
     setSortedWishList(sortedList)
   }

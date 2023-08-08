@@ -20,6 +20,13 @@ class UserStore{
         this.currentUserGuest=null;
     }
 
+    updateWishList(userId, updatedWishList) {
+        const user = this.users.find((user) => user.id === userId);
+        if (user) {
+          user.wishList = updatedWishList;
+        }
+    }
+
     constructor(){
         makeAutoObservable(this,{
             currentUser:observable,
@@ -28,6 +35,7 @@ class UserStore{
             currentUserGuest:observable,
             setCurrentUserGuest:action,
             clearCurrentUserGuest:action,
+            updateWishList:action
         })
     }
 }
