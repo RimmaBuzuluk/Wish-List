@@ -6,18 +6,32 @@ import TopBorder from '../component/TopBordrder';
 import WishItem from '../component/WishItem';
 import WishItemUser from './WishItemUser';
 import UserStore from '../store/UserStore';
+import { useState } from 'react';
 
 
 
 const UserPage=observer(()=> {
     const { userId } = useParams();
 
+   
+
     const user = PersonStore.people.find((people) => people.id === parseInt(userId))
+    const [sortedWishList, setSortedWishList] = useState([...user.wishList]);
 
     UserStore.setCurrentUserGuest(user);
 
     
-
+    const sortByAlphabet = () => {
+      const sortedList = sortedWishList.sort((a, b) => a.wishName.localeCompare(b.wishName));
+      PersonStore.sortWishlistAlphabetically(user.id);
+      setSortedWishList(sortedList);
+    };
+  
+    const sortByPrice = () => {
+      const sortedList = sortedWishList.sort((a, b) => a.price - b.price)
+      PersonStore.sortWishlistPrice(user.id)
+      setSortedWishList(sortedList)
+    }
 
   
   return (
@@ -36,6 +50,10 @@ const UserPage=observer(()=> {
     <div className='WishList'>
       <div className='buttonAndTextList'>
         <h3 className='MyWishText'>{user.name}'s wish list</h3>
+      </div>
+      <div className='ButtonAlfPrice'>
+        <button className='buttonAlfavit BFilter' onClick={sortByAlphabet}>alphabet</button>
+        <button className='buttonPrice BFilter' onClick={sortByPrice}>price</button>
       </div>
       <div className='wishItemContainer'>
       {user.wishList.map((wishList) => (
